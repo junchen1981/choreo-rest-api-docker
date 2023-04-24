@@ -28,4 +28,5 @@ RUN pip --no-cache-dir install -r requirements.txt
 RUN addgroup -g 10016 choreo && \
     adduser  --disabled-password  --no-create-home --uid 10016 --ingroup choreo choreouser
 USER 10016
+EXPOSE 5000
 CMD ["python3", "app.py"]
